@@ -1,0 +1,48 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggle.emit()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>
+      <a routerLink="/" class="text-reset ml-3">
+        App Name
+      </a>
+    </h1>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <div class="d-flex flex-row-reverse">
+            <div class="pt-2">
+              <ul>
+                <li>
+                  <button mat-icon-button>
+                     <mat-icon>settings</mat-icon>
+                  </button>
+                </li>
+                <li>
+                  <button mat-icon-button>
+                    <mat-icon>help_outline</mat-icon>
+                  </button>
+                </li>
+                <li>
+                  <button mat-button [matMenuTriggerFor]="menu">
+                    <mat-icon>person_outline</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                      <mat-icon>exit_to_app</mat-icon>
+                      Sign out
+                    </button>
+                  </mat-menu>
+                 </li>
+               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </mat-toolbar-row>
+</mat-toolbar>
