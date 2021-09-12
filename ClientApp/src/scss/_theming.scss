@@ -1,9 +1,10 @@
+@use '~@angular/material' as mat;
 $prefix: 'am-';
 
 @mixin _generate_utility_for_prop($type, $abbrev, $prop, $palette, $variant) {
   .#{$prefix}#{$abbrev}-#{$type}-#{$variant},
   .hover\:#{$prefix}#{$abbrev}-#{$type}-#{$variant}:hover {
-    #{$prop}: mat-color($palette, $variant) !important;
+    #{$prop}: mat.get-color-from-palette($palette, $variant) !important;
   }
 }
 
